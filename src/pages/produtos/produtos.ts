@@ -49,7 +49,7 @@ export class ProdutosPage {
       let item = this.items[i];
       this.produtoService.getSmallImageFromBucket(item.id)
         .subscribe(response => {
-          item.imageUrl = `${API_CONFIG.bucketBaseUrl}/prod${item.id}-small.jpg`;
+          item.imageUrl = `${API_CONFIG.bucketBaseUrl}/prod${item.id}.jpg`;
         },
         error => {});
     }
